@@ -13,7 +13,40 @@
         <section class="events"></section>
         <section class="merchandise"></section>
         <section class="tickets"></section>
-        <section class="contact"></section>
+        <section class="contact">
+          <form class="contact__form">
+            <h2 class="contact__title">
+              Contact Us
+            </h2>
+            <input
+              name="name"
+              placeholder="Name"
+              class="contact__name"
+              required
+            />
+            <input
+              name="emailaddress"
+              placeholder="Email"
+              class="contact__email"
+              type="email"
+              required
+            />
+            <input
+              minlength="10"
+              maxlength="999"
+              name="subject"
+              placeholder="Message"
+              class="contact__message"
+              required
+            />
+            <input
+              name="submit"
+              class="contact__btn"
+              type="submit"
+              value="Send"
+            />
+          </form>
+        </section>
       </main>
       <footer class="footer"></footer>
     </div>
