@@ -2,6 +2,7 @@
 @import url(../vendor/fonts/.css);
 @import url(../blocks/page.css);
 @import url(../blocks/contact.css);
+@import url(../blocks/merch.css);
 
 .header {
   border: 1px solid white;
