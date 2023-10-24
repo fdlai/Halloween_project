@@ -8,12 +8,31 @@
   </head>
   <body class="page">
     <div class="page__content">
-      <header class="header">Welcome to 13th Gate!</header>
+      <header class="header">
+        <nav class="nav">
+          <img src="#" alt="13th Gate Logo" />
+          <ul class="nav__links">
+            <li>
+              <a href="#events" class="nav__link">Events</a>
+            </li>
+            <li>
+              <a href="#merchandise" class="nav__link">Merchandise</a>
+            </li>
+            <li>
+              <a href="#tickets" class="nav__link">Tickets</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="header__title">Welcome to 13th Gate!</h1>
+      </header>
       <main class="content">
-        <section class="events"></section>
-        <section class="merchandise"></section>
+        <section class="events" id="events"></section>
+        <section class="merchandise" id="merchandise"></section>
         <!-- --------------------------- Tickets Section --------------------------- -->
-        <section class="tickets">
+        <section class="tickets" id="tickets">
           <h2 class="tickets__header">Get Tickets</h2>
           <div class="tickets__content">
             <div class="tickets__details" id="ticket-details">
@@ -45,7 +64,7 @@
             </div>
           </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
           <form class="contact__form">
             <h2 class="contact__title">Contact Us</h2>
             <input
