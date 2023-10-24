@@ -1,0 +1,9 @@
+.tickets {
+  font-size: 24px;
+}
+
+.tickets__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
