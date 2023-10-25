@@ -8,8 +8,28 @@
   </head>
   <body class="page">
     <div class="page__content">
-      <header class="header">Welcome to 13th Gate!</header>
+      <header class="header">
+        <nav class="nav">
+          <img src="#" alt="13th Gate Logo" />
+          <ul class="nav__links">
+            <li>
+              <a href="#events" class="nav__link">Events</a>
+            </li>
+            <li>
+              <a href="#merchandise" class="nav__link">Merchandise</a>
+            </li>
+            <li>
+              <a href="#tickets" class="nav__link">Tickets</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="header__title">Welcome to 13th Gate!</h1>
+      </header>
       <main class="content">
+
         <section class="events"></section>
         <section class="merchandise">
           <h2 class="merch__title">Check out our Merchandise!</h2>
@@ -32,10 +52,46 @@
         </section>
         <section class="tickets"></section>
         <section class="contact">
+
+        <section class="events" id="events"></section>
+        <section class="merchandise" id="merchandise"></section>
+        <!-- --------------------------- Tickets Section --------------------------- -->
+        <section class="tickets" id="tickets">
+          <h2 class="tickets__header">Get Tickets</h2>
+          <div class="tickets__content">
+            <div class="tickets__details" id="ticket-details">
+              <p>13th Gate - General Admission</p>
+              <p>Price per Ticket: $35.00</p>
+              <!-- Quantity Dropdown -->
+              <label for="quantity">Quantity:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <!-- Add to Cart Button -->
+              <button id="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="tickets__cart" id="cart">
+              <h2>Shopping Cart</h2>
+              <ul id="cart-items">
+                <!-- Cart items will be displayed here -->
+              </ul>
+              <button class="tickets__checkout-button">Checkout</button>
+            </div>
+          </div>
+        </section>
+        <section class="contact" id="contact">
+
           <form class="contact__form">
-            <h2 class="contact__title">
-              Contact Us
-            </h2>
+            <h2 class="contact__title">Contact Us</h2>
             <input
               name="name"
               placeholder="Name"
@@ -67,6 +123,62 @@
         </section>
       </main>
       <footer class="footer"></footer>
+      <div class="modal" id="modal-checkout">
+        <div class="modal__container">
+          <button
+            class="modal__close-button"
+            type="button"
+            aria-label="close"
+          ></button>
+          <p class="modal__heading">Checkout</p>
+          <form
+            class="modal__form"
+            id="modal-checkout-form"
+            name="modal-checkout-form"
+          >
+            <input
+              class="modal__input"
+              type="text"
+              name="name"
+              id="checkout-name-input"
+              placeholder="Name"
+              required
+              minlength="2"
+              maxlength="50"
+            />
+
+            <input
+              class="modal__input"
+              type="email"
+              name="email"
+              id="checkout-email-input"
+              placeholder="Email"
+              required
+              minlength="2"
+              maxlength="80"
+            />
+
+            <input
+              class="modal__input"
+              type="email"
+              name="confirm-email"
+              id="checkout-confirm-email-input"
+              placeholder="Confirm Email"
+              required
+              minlength="2"
+              maxlength="80"
+            />
+
+            <button
+              class="modal__submit-button"
+              type="submit"
+              aria-label="Purchase"
+            >
+              Purchase
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="./pages/index.js"></script>
   </body>
