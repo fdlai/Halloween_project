@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./pages/index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap");
+    </style>
   </head>
   <body class="page">
     <div class="page__content">
@@ -29,10 +32,18 @@
         <h1 class="header__title">Welcome to 13th Gate!</h1>
       </header>
       <main class="content">
+        <!-- --------------------------- Events Section ---------------------------- -->
         <section class="events" id="events">
+          <div class="events__title-container">
+            <h2 class="events__title">Events</h2>
+          </div>
           <ul class="events__list">
             <li class="event">
-              <img class="event__image" src="#" alt="" />
+              <img
+                class="event__image"
+                src="https://www.tripsavvy.com/thmb/mvWutuEcnpkzv--9_AB5buAuk9A=/1400x930/filters:fill(auto,1)/fright_nights_mansion-56a9bb045f9b58b7d0fe71ac.jpg"
+                alt=""
+              />
               <h3 class="event__name">Haunted House</h3>
               <p class="event__description">
                 Widely regarded as one of the top haunted houses in the Country,
@@ -42,21 +53,33 @@
               </p>
             </li>
             <li class="event">
-              <img class="event__image" src="#" alt="" />
+              <img
+                class="event__image"
+                src="https://fortemag.com.au/wp-content/uploads/2020/11/horror-e1606801074961.jpg"
+                alt=""
+              />
               <h3 class="event__name">Escape Room</h3>
               <p class="event__description">
                 You Have 60 minutes And One Goal... Escape before time runs out!
               </p>
             </li>
             <li class="event">
-              <img class="event__image" src="#" alt="" />
+              <img
+                class="event__image"
+                src="https://i.pinimg.com/originals/8a/46/71/8a46711aa783fdbe13a6081aae9382e0.jpg"
+                alt=""
+              />
               <h3 class="event__name">Carnival Games</h3>
               <p class="event__description">
                 Earn tokens and win spooky prizes!
               </p>
             </li>
             <li class="event">
-              <img class="event__image" src="#" alt="" />
+              <img
+                class="event__image"
+                src="https://th-thumbnailer.cdn-si-edu.com/D-g7xx6mY7lJVuBixPaqsOAhkBs=/fit-in/1072x0/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/7a0b5e0cf90d13c92f87e808a6e72cff8f18ebd3.jpg"
+                alt=""
+              />
               <h3 class="event__name">Concerts</h3>
               <p class="event__description">
                 Every Friday & Saturday Night in October, enjoy a concert by
@@ -65,6 +88,7 @@
             </li>
           </ul>
         </section>
+        <!-- ------------------------- Merchandise Section ------------------------- -->
         <section class="merchandise" id="merchandise">
           <h2 class="merch__title">Check out our Merchandise!</h2>
           <p class="merch__subtitle">Available for purchase in person</p>
@@ -113,8 +137,6 @@
                 General Admission access to the 13th Gate Haunted House and all
                 attractions.
               </p>
-
-              <!-- Quantity Dropdown -->
               <label class="tickets__label" for="quantity">
                 <p class="tickets__name">Quantity:</p>
                 <div class="tickets__buttons">
@@ -130,7 +152,6 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                   </select>
-                  <!-- Add to Cart Button -->
                   <button id="add-to-cart">Add to Cart</button>
                 </div>
               </label>
@@ -147,6 +168,7 @@
             </div>
           </div>
         </section>
+        <!-- --------------------------- Contact Section --------------------------- -->
         <section class="contact" id="contact">
           <form class="contact__form">
             <h2 class="contact__title">Contact Us</h2>
@@ -180,6 +202,7 @@
           </form>
         </section>
       </main>
+      <!-- ------------------------------- Footer -------------------------------- -->
       <footer class="footer"></footer>
       <div class="modal" id="modal-checkout">
         <div class="modal__container">

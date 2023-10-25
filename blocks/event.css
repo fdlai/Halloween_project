@@ -2,14 +2,21 @@
   border: 1px solid #ccc;
   padding: 20px;
   text-align: center;
+  background-image: url("https://wallpaperaccess.com/full/4177487.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6px;
+  color: black;
 }
 
 .event__image {
   max-width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 6px;
 }
 
 .event__name {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .event__description {
