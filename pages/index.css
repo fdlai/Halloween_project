@@ -6,3 +6,10 @@
 @import url(../blocks/tickets.css);
 @import url(../blocks/modal.css);
 @import url(../blocks/contact.css);
+
+@import url(../blocks/merch.css);
+
+.header {
+  border: 1px solid white;
+}
+
