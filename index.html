@@ -102,26 +102,36 @@
             <div class="tickets__details" id="ticket-details">
               <p>13th Gate - General Admission</p>
               <p>Price per Ticket: $35.00</p>
+              <label class="tickets__label" for="ticket-type">
+                <p class="tickets__name">Select a Ticket:</p>
+                <select id="ticket-type">
+                  <option value="35">General Admission ($35)</option>
+                  <option value="75">VIP Admission ($75)</option>
+                </select></label
+              >
+
               <!-- Quantity Dropdown -->
-              <label for="quantity">Quantity:</label>
-              <select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-              <!-- Add to Cart Button -->
-              <button id="add-to-cart">Add to Cart</button>
+              <label class="tickets__label" for="quantity">
+                <p class="tickets__name">Quantity:</p>
+                <select id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <!-- Add to Cart Button -->
+                <button id="add-to-cart">Add to Cart</button>
+              </label>
             </div>
             <div class="tickets__cart" id="cart">
-              <h2>Shopping Cart</h2>
-              <ul id="cart-items">
+              <h2 class="tickets__title">Shopping Cart</h2>
+              <ul class="tickets__list" id="cart-items">
                 <!-- Cart items will be displayed here -->
               </ul>
               <button class="tickets__checkout-button">Checkout</button>

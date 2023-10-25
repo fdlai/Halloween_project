@@ -2,6 +2,7 @@
 /*                                  Elements                                  */
 /* -------------------------------------------------------------------------- */
 const addToCartButton = document.querySelector("#add-to-cart");
+const ticketPriceDropdown = document.querySelector("#ticket-type");
 const quantityDropdown = document.querySelector("#quantity");
 const cartItemsList = document.querySelector("#cart-items");
 const checkoutButton = document.querySelector(".tickets__checkout-button");
@@ -9,12 +10,18 @@ const checkoutModal = document.querySelector("#modal-checkout");
 /* -------------------------------------------------------------------------- */
 /*                                  Functions                                 */
 /* -------------------------------------------------------------------------- */
-function addToCart(ticketName, ticketPrice) {
+function addToCart(ticketName) {
+  const digitMatches = ticketPriceDropdown.value.match(/\d+/g);
+
+  // Convert matched digits to numbers using parseInt
+  const ticketPrice = parseInt(digitMatches, 10);
+
   const selectedQuantity = quantityDropdown.value;
   const total = ticketPrice * selectedQuantity;
 
   // Create a new cart item element
   const cartItem = document.createElement("li");
+  cartItem.classList.add("tickets__ticket");
   cartItem.textContent = `${ticketName} x${selectedQuantity} - Total: $${total.toFixed(
     2
   )}`;
