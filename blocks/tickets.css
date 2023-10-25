@@ -40,6 +40,19 @@
   display: block;
 }
 
+.tickets__name {
+  margin-top: 0;
+}
+
+.tickets__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tickets__description {
+  min-height: 100px;
+}
+
 .tickets__cart {
   border: 1px solid white;
   padding: 15px;
@@ -76,11 +89,24 @@
 }
 
 .tickets__title {
+  margin-top: 0;
 }
 
 .tickets__list {
   min-height: 300px;
 }
 
-.tickets__ticket {
+.tickets__info {
+}
+
+.ticket {
+  display: flex;
+}
+
+.ticket__remove-button {
+  background-image: url(../images/close-button.svg);
+  height: 26px;
+  width: 26px;
+  background-color: transparent;
+  border: none;
 }
