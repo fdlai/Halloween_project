@@ -36,6 +36,10 @@
   min-height: 100px;
 }
 
+.tickets__label {
+  display: block;
+}
+
 .tickets__cart {
   border: 1px solid white;
   padding: 15px;
@@ -69,4 +73,14 @@
   width: 26px;
   background-color: transparent;
   border: none;
+}
+
+.tickets__title {
+}
+
+.tickets__list {
+  min-height: 300px;
+}
+
+.tickets__ticket {
 }
