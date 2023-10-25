@@ -21,19 +21,21 @@
 .events__title-container {
   background-image: url("https://149545716.v2.pressablecdn.com/wp-content/uploads/2019/10/spooky-banner.jpg");
   padding: 50px 0;
-  box-shadow: 25px 25px 100px 0 rgb(29, 29, 29) inset,
-    -25px -25px 100px 0 rgb(29, 29, 29) inset;
+  box-shadow: 25px 25px 150px 0 rgb(29, 29, 29) inset,
+    -25px -25px 150px 0 rgb(29, 29, 29) inset;
+  border-radius: 40px;
 }
 
 .events__title {
   text-align: center;
   font-size: 40px;
   margin: 0;
+  color: ghostwhite;
 }
 
 .events__list {
   position: relative;
-  margin: 0;
+  /* margin: 0; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
