@@ -1,0 +1,17 @@
+.event {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.event__image {
+  max-width: 100%;
+}
+
+.event__name {
+  font-size: 20px;
+}
+
+.event__description {
+  margin: 0;
+}
