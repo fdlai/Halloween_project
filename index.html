@@ -100,31 +100,50 @@
           <h2 class="tickets__header">Get Tickets</h2>
           <div class="tickets__content">
             <div class="tickets__details" id="ticket-details">
-              <p>13th Gate - General Admission</p>
-              <p>Price per Ticket: $35.00</p>
+              <label class="tickets__label" for="ticket-type">
+                <p class="tickets__name">Select a Ticket:</p>
+                <select id="ticket-type">
+                  <option value="General Admission">
+                    General Admission ($35)
+                  </option>
+                  <option value="VIP Admission">VIP Admission ($75)</option>
+                </select></label
+              >
+              <p class="tickets__description">
+                General Admission access to the 13th Gate Haunted House and all
+                attractions.
+              </p>
+
               <!-- Quantity Dropdown -->
-              <label for="quantity">Quantity:</label>
-              <select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-              <!-- Add to Cart Button -->
-              <button id="add-to-cart">Add to Cart</button>
+              <label class="tickets__label" for="quantity">
+                <p class="tickets__name">Quantity:</p>
+                <div class="tickets__buttons">
+                  <select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                  <!-- Add to Cart Button -->
+                  <button id="add-to-cart">Add to Cart</button>
+                </div>
+              </label>
             </div>
             <div class="tickets__cart" id="cart">
-              <h2>Shopping Cart</h2>
-              <ul id="cart-items">
+              <h2 class="tickets__title">Shopping Cart</h2>
+              <ul class="tickets__list" id="cart-items">
                 <!-- Cart items will be displayed here -->
               </ul>
-              <button class="tickets__checkout-button">Checkout</button>
+              <p class="tickets__total">Total: $00.00</p>
+              <button class="tickets__checkout-button" disabled="true">
+                Checkout
+              </button>
             </div>
           </div>
         </section>
@@ -188,6 +207,16 @@
 
             <input
               class="modal__input"
+              type="text"
+              name="credit-card"
+              id="checkout-credit-card-input"
+              placeholder="Credit Card"
+              required
+              minlength="2"
+              maxlength="80"
+            />
+            <input
+              class="modal__input"
               type="email"
               name="email"
               id="checkout-email-input"
@@ -197,16 +226,7 @@
               maxlength="80"
             />
 
-            <input
-              class="modal__input"
-              type="email"
-              name="confirm-email"
-              id="checkout-confirm-email-input"
-              placeholder="Confirm Email"
-              required
-              minlength="2"
-              maxlength="80"
-            />
+            <p class="modal__total">Your total is: $75.00</p>
 
             <button
               class="modal__submit-button"
@@ -219,6 +239,12 @@
         </div>
       </div>
     </div>
+    <template id="ticket-template">
+      <div class="ticket">
+        <li class="ticket__info">General Admission x1 - Price: $35.00</li>
+        <button class="ticket__remove-button"></button>
+      </div>
+    </template>
     <script src="./pages/index.js"></script>
   </body>
 </html>
