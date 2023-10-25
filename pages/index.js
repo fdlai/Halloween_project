@@ -16,7 +16,7 @@ const ticketTemplate =
 /*                                  Functions                                 */
 /* -------------------------------------------------------------------------- */
 function handleCheckoutButtonState() {
-  if (cartItemsList.textContent === "") {
+  if (cartItemsList.textContent.trim() === "") {
     checkoutButton.disabled = true;
   } else {
     checkoutButton.disabled = false;
@@ -50,18 +50,29 @@ function addToCart() {
   const cartItemRemoveButton = cartItem.querySelector(".ticket__remove-button");
   cartItemRemoveButton.addEventListener("click", () => {
     cartItem.remove();
+    updateTotal();
+    handleCheckoutButtonState();
   });
+
+  function updateTotal() {
+    const total = calculateTotal();
+    ticketsTotal.textContent = `Total: $${total.toFixed(2)}`;
+  }
 
   // Add the item to the cart
   cartItemsList.appendChild(cartItem);
   const total = calculateTotal();
-  ticketsTotal.textContent = `Total: $${total.toFixed(2)}`;
+  updateTotal();
 
   handleCheckoutButtonState();
 }
 
 function calculateTotal() {
-  const nums = cartItemsList.textContent.match(/(?<=\$)\d+/g).map(parseFloat);
+  const text = cartItemsList.textContent.trim();
+  if (text === "") {
+    return 0;
+  }
+  const nums = text.match(/(?<=\$)\d+/g).map(parseFloat);
   return nums.reduce((a, b) => a + b);
 }
 /* -------------------------------------------------------------------------- */
